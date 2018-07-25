@@ -4,8 +4,8 @@ import "time"
 
 // 评价表
 type Article struct {
-	ID  		string 		`json:"id" orm:"rel(fk);auto;unique;size(18)"`
-	ClassifyID 	uint64 		`json:"classify_id"` // 分类ID
+	Id 			uint64 		`json:"id"`
+	ClassifyId 	uint64 		`json:"classify_id"` // 分类ID
 	Title 		string 		`json:"title" orm:"size(128)"`
 	Content     string 		`json:"content" orm:"type(text)"` // 内容
 	ImagesCount int64 		`json:"images_count" orm:"size(3)"` 	// 上传图片数

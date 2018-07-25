@@ -81,7 +81,7 @@ func SetCache(key string, value interface{}, timeout int) error {
 
 func GetCache(key string, to interface{}) error {
 	if cc == nil {
-		return errors.New("cc is nil")
+		return errors.New("缓存不能为空")
 	}
 
 	defer func() {

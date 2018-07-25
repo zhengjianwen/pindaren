@@ -2,6 +2,6 @@ package models
 
 // 分类信息表
 type Classify struct {
-	ID  		uint64 		`json:"id" orm:"rel(fk);auto;unique;size(14)"`
+	Id  		uint64 		`json:"id"`
 	Name 		string 		`json:"name"`
 }

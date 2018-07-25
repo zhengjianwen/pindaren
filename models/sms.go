@@ -2,10 +2,9 @@ package models
 
 import "time"
 
-// 用户收藏表
-type Collection struct {
-	Id  		int64 `json:"id"`
-	Aid 		int64 `json:"aid"` // 评价ID
+type SendSms struct {
+	Id 			int64 `json:"id"`
+	Phone 		int64 `json:"phone"`
+	Content 	string `json:"content"`
 	Created 	time.Time 	`json:"created" orm:"auto_now_add;type(datetime)"` // 创建时间
 }
-
