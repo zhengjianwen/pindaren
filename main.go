@@ -2,12 +2,15 @@ package main
 
 import (
 	_ "github.com/zhengjianwen/pindaren/routers"
+	_"github.com/zhengjianwen/pindaren/models"
+	_"github.com/zhengjianwen/pindaren/initial"
 	"github.com/astaxie/beego"
-	"github.com/zhengjianwen/pindaren/models"
+	"github.com/astaxie/beego/orm"
+
 )
 
 func main() {
-	models.MysqlInit()
 	beego.Run()
+	orm.RunCommand()
 }
 
