@@ -22,7 +22,7 @@ func init()  {
 	orm.RegisterDataBase("default", "mysql", addr,maxIdle,maxConn)
 	orm.DefaultTimeLoc = time.UTC
 	orm.RegisterModel(new(AuthUser),new(UserInfo),new(Classify),new(Member),new(Comment),new(Collection),
-		new(News),new(Praise),new(tags),new(Images),new(Article))
+		new(News),new(Praise),new(tags),new(Images),new(Article),new(Admin),new(SendSms),new(SysInfo))
 
 	name := "default"
 
@@ -35,9 +35,9 @@ func init()  {
 func getMysqlUrl() string {
 	user := beego.AppConfig.DefaultString("mysqluser","root")
 	pasw := beego.AppConfig.DefaultString("mysqlpass","123456")
-	addr := beego.AppConfig.DefaultString("mysqlurls","127.0.0.1")
-	port := beego.AppConfig.DefaultInt64("mysqlport",3306)
+	//addr := beego.AppConfig.DefaultString("mysqlurls","127.0.0.1")
+	//port := beego.AppConfig.DefaultInt64("mysqlport",3306)
 	dbname := beego.AppConfig.DefaultString("mysqldb","pindaren")
-	url := "%s:%s@tcp(%s:%d)/%s?charset=utf8&loc=Asia%%2FShanghai"
-	return fmt.Sprintf(url,user,pasw,addr,port,dbname)
+	url := "%s:%s@/%s?charset=utf8"
+	return fmt.Sprintf(url,user,pasw,dbname)
 }

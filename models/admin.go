@@ -5,12 +5,11 @@ import (
 	"fmt"
 	"github.com/astaxie/beego/orm"
 	"github.com/zhengjianwen/utils/log"
-	"github.com/kless/osutil/user/crypt/sha512_crypt"
 )
 
-type AuthUser struct {
-	Id  		uint64 		`json:"id"`
-	NickName 	string 		`json:"nick_name" orm:"column(nickname);size(120);null"`
+type Admin struct {
+	Id  		uint64 		`json:"id" orm:"pk"`
+	Name 		string 		`json:"nick_name" orm:"column(nickname);size(120);null"`
 	UserName 	string 		`json:"username" orm:"column(username);index;size(120);null"` // 账号
 	Phone 		string 		`json:"phone" orm:"index"` // 手机号
 	PassWord 	string 		`json:"-" orm:"column(password);size(128);"`// 密码
@@ -19,25 +18,25 @@ type AuthUser struct {
 	Created 	time.Time 	`json:"created" orm:"auto_now_add;type(datetime)"` // 创建时间
 	LastLogin  	time.Time 	`json:"lastlogin" orm:"type(datetime)"` // 最后一次登录时间
 	Updated 	time.Time 	`json:"updated" orm:"auto_now;type(datetime)"` // 最后一次修改时间
-	Info        UserInfo 	`json:"info" orm:"-"`
 }
 
-
-func (u *AuthUser) Get() (error) {
+func (u *Admin) Get(pk string) (error) {
 	if u == nil{
 		return fmt.Errorf("用户信息不能为空")
 	}
 	o := orm.NewOrm()
 	o.Using("default")
 	//
-	err := o.Read(u,"phone")
+	err := o.Read(u,pk)
 	if err != nil{
+		log.Debugf("[Admin][Get] %v",err)
 		return fmt.Errorf("获取用户信息失败")
 	}
+
 	return nil
 }
 
-func (u *AuthUser) Save() (error) {
+func (u *Admin) Save() (error) {
 	if u == nil{
 		return fmt.Errorf("用户信息不能为空")
 	}
@@ -49,30 +48,24 @@ func (u *AuthUser) Save() (error) {
 	//
 	_,err := o.InsertOrUpdate(u)
 	if err != nil{
-		log.Errorf("[AuthUser][Save] 数据错误")
+		log.Errorf("[Admin][Save] 数据错误")
 		return fmt.Errorf("插入数据或更新失败")
 	}
 	return nil
 }
 
-func (u *AuthUser) Validate() (string) {
+func (u *Admin) Validate() (string) {
 	if u == nil{
 		return "用户信息不能为空"
 	}
 	if u.Phone == ""{
 		return "用户手机号不能为空"
 	}
-	u.Get()
 	if u.PassWord == ""{
-		u.PassWord = EncryptPassword("pwd"+u.Phone)
+		return "用户密码不能为空"
+	}
+	if len(u.PassWord) < 32 || len(u.PassWord) > 128 {
+		return "密码编码格式不正确"
 	}
 	return ""
-}
-
-
-// EncryptPassword 对密码加盐加密
-func EncryptPassword(password string) string {
-	hash := sha512_crypt.New()
-	encrypt, _ := hash.Generate([]byte(password), []byte("$6$"+"h2a0i1r8u6i29Le!Le"))
-	return encrypt
 }
