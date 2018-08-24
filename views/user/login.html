@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="_xsrf" content="{{.xsrf_token}}" />
+    <link rel="stylesheet" type="text/css" href="/static/css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css" />
+
+    <!-- <link rel="shortcut icon" href="./static/images/icon.ico" type="image/x-icon" /> 图标-->
+    <script src="/static/js/remStyle.js"></script>
+    <title>评大人- 登录</title>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">登录</h1>
+    </header>
+    <div class="content">
+        <h4>欢迎进入评大人</h4>
+        <form id="loginForm" method="post">
+        <div class="formA">
+                <input type="hidden" name="_xsrf" id="xsrf" value="{{.xsrfdata}}">
+                <div class="mui-row moblie">
+                    <input type="tel" autocomplete="off" onpaste="return false" name="phone" value="{{.phone}}" onkeyup="value=value.replace(/[^\d| ]/g,'')" onafterpaste="this.value=this.value.replace(/[0-9\ ]/g,'')" placeholder="点击输入您的手机号码" maxlength="11" id="tel">
+                </div>
+                <div class="mui-row smscode">
+                    <input name="code" type="tel" placeholder="点击输入验证码" id="smsCodeP">
+                    <button id="getSms" type="button">获取验证码</button>
+                </div>
+                <div style="color: red">{{.err}}</div>
+
+        </div>
+        <div class="sureBtn">
+            <input type="submit" class="mui-btn mui-btn-block" value="登录"/>
+        </div>
+        </form>
+    </div>
+    <script src="/static/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./static/js/login.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

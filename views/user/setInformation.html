@@ -1,0 +1,104 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" type="text/css" href="./static/css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./static/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="./static/css/mui.picker.min.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/information.css" />
+    <!-- <link rel="shortcut icon" href="./static/images/icon.ico" type="image/x-icon" /> 图标-->
+    <script src="./static/js/remStyle.js"></script>
+    <style>
+        .save {
+            display: block;
+            height: 44px;
+            line-height: 44px;
+            color: #CEA56B !important;
+        }
+    </style>
+    <title>评大人-修改信息</title>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <span class="mui-icon mui-icon-arrowleft back"></span>
+        <h1 class="mui-title">修改信息</h1>
+        <a class="mui-pull-right save">保存</a>
+    </header>
+    <div class="content">
+        <div class="showInfor">
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    昵称
+                </div>
+                <div class="mui-col-xs-8">
+                    <input type="text">
+                </div>
+                <div class="mui-col-xs-1">
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    生日
+                </div>
+                <div class="mui-col-xs-8" id="birTime">
+                    1997-08-09
+                </div>
+                <div class="mui-col-xs-1">
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    性别
+                </div>
+                <div class="mui-col-xs-8">
+                    <select id="sex">
+                        <option value="">--请选择--</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                </div>
+                <div class="mui-col-xs-1">
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    家乡
+                </div>
+                <div class="mui-col-xs-8" id="address">
+                    山东德州
+                </div>
+                <div class="mui-col-xs-1">
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    个性签名
+                </div>
+                <div class="mui-col-xs-8 owner">
+                    <input type="text">
+                </div>
+                <div class="mui-col-xs-1">
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./static/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./static/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./static/js/mui.picker.min.js"></script>
+    <script src="./static/js/mui.poppicker.js"></script>
+    <script src="./static/js/city.data-3.js"></script>
+    <script src="./static/js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./static/js/setInformation.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

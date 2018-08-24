@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/mui.picker.min.css">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: hotpink;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="box">
+        点击我
+    </div> -->
+    <input type="file" id="filechoose" style="display: none;">
+    <input type="text" placeholder="请选择地址" value="" id="site" />
+    <script src="../js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/mui.picker.min.js"></script>
+    <script src="../js/mui.poppicker.js"></script>
+    <script src="../js/city.data-3.js"></script>
+    <script>
+        // document.getElementById('box').onclick = function () {
+        //     $('#filechoose').click()
+        // }
+        // $('#filechoose').onchange = function () {
+        //     if (!this.files.length) return;
+
+        // }
+        //选择省市区 
+        mui.init();
+        mui(function () {
+            cityPicker = new mui.PopPicker({
+                layer: 3
+            });
+            cityPicker.setData(cityData3);
+        });
+        var address = '';
+        //选择区域
+        function chooseArea() {
+            address = '';
+            cityPicker.show(function (items) {
+                // items为选中的三级区域信息
+                for (var i = 0; i < items.length; i++) {
+                    address += items[i].text;
+                }
+                $('#site').val('')
+                $('#site').val(address)
+            });
+        }
+        //关闭选择器
+        function closeChoose() {
+            cityPicker.hide();
+        }
+        $('#site').on('click', function () {
+            chooseArea()
+        })
+    </script>
+</body>
+
+</html>

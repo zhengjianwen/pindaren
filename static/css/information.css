@@ -1,0 +1,33 @@
+
+body{position: relative;padding-top: 44px;height: 100%;}
+html{height: 100%;}
+/* 头部 */
+header{padding: 0 0.5rem;background: #fff!important;position: fixed!important;top:0;left: 0;width: 100%;box-shadow: none!important;}
+.content{
+    width: 100%;
+    background: #F4F0F1;
+    height: 100%;
+    padding-top: 0.08rem;
+}
+.showInfor{background: #fff;}
+.showInfor .mui-row{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-bottom: 1px solid #E9E9E9;
+    padding: 0rem 0.44rem;
+}
+/* 个性签名 */
+.owner{
+    display: -webkit-box;
+    display: -moz-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp:1;
+}
+.showBtn{width: 100%;}
+.showBtn ul{width: 100%;}
+.showBtn ul li{width: 100%;text-align: center;height: 0.88rem;line-height: 0.88rem;background: #fff;margin-top: 0.32rem;}
+
+.mui-row input{width:100%;border: none;margin-bottom: 0;height: 36px;padding-left: 0;font-size: 14px;}

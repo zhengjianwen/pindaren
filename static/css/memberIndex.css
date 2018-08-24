@@ -1,0 +1,77 @@
+/* 头部 */
+header{padding: 0 0.5rem;background: #fff!important;position: fixed!important;top:0;left: 0;width: 100%;box-shadow: none!important;}
+header #searchInp{  
+    background: #fff;
+    border: none;border-bottom: 1px solid #5d5d5d;
+    border-radius: 0px;
+    line-height: 0.42rem;
+    height: 0.8rem;
+    padding: 0.1rem 0.3rem 0.05rem 0.6rem;
+    font-size:0.34rem;
+    margin-bottom: 0.15rem!important;
+}    
+header .mui-icon-search{
+    position: absolute;
+    top: 0.18rem;
+    font-size: 0.48rem!important;
+}
+.content{
+    margin-top: 0.08rem;
+    width: 100%;
+    background: #fff;
+    height: 100%;
+    padding: 0.2rem 0.76rem;
+}
+.firstP{
+    width: 100%;
+}
+.firstP .left{
+    width: 2rem;
+    height: 2rem;
+    float: left;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background: url('../image/image02.png') no-repeat;
+    background-size: 100% 100%;
+}
+.firstP .right{
+    padding: 0.48rem 0rem 0rem 0.44rem;
+}
+.right .nickName{width: 100%;}
+.right .nickName .name{display: inline-block;color:#000;font-size: 0.3rem;}
+.right .nickName .mui-icon-arrowright{float: right;font-size: 0.5rem;line-height: 0.8;}
+.right .logo{width: 100%;margin-top: 0.08rem;}
+.right .logo li{font-size:0.2rem; float: left;background: #D0A972;padding: 0 0.12rem;margin-right: 0.08rem;border-radius: 6px;}
+.qianM{
+    font-size: 0.2rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp:1;
+   margin-top: 0.1rem;
+}
+.cateUl{width: 100%;margin-top: 0.5rem;}
+.cateUl li{width: 100%;color: #000;font-size: 0.32rem;height: 1rem;line-height: 1rem;float: left;}
+.cateUl li .num{float: right;}
+.cateUl li .num .mui-icon-arrowright{font-size: 0.4rem;}
+.numshow{font-size: 0.28rem;color: #D0A972;font-weight: normal;}
+/* 底部 */
+.botNav{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    padding:0.04rem 0.6rem;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 6px #ccc;
+}
+.botNav span{color:#000;font-size: 0.32rem;width: 33.3%;display: block;float: left;text-align: center;}
+.botNav span:nth-child(2) a{color:#D0A972;font-size: 0.56rem;}
+body{position: relative;padding-top: 44px;height: 100%;}
+html{height: 100%;}

@@ -1,0 +1,103 @@
+/* 头部 */
+header{padding: 0 0.5rem;background: #fff!important;position: fixed!important;top:0;left: 0;width: 100%;box-shadow: none!important;}
+.content{
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 0.8rem;
+}
+.content ul{
+    width: 100%;
+}
+.content ul li{
+    width: 100%;
+    background: #fff;
+    margin-top: 0.08rem;
+    padding: 0.32rem 0.36rem 0.16rem;
+}
+.content ul li .top{
+    width: 100%;
+    display: flex;
+}
+.content ul li .top .left{
+    width: 3.88rem;
+   margin-right: 0.02rem;
+}
+.content ul li .top .left .touxiang i,.toptwo .touxiang i{
+    width: 0.28rem;
+    height: 0.28rem;
+    display: block;
+    background: #D0A972;
+    vertical-align: middle;
+    display: inline-block;
+}
+.content ul li .top .left .touxiang p,.toptwo .touxiang p{
+    display: inline;
+    color:#000;
+    font-size: 0.24rem;
+}
+.content ul li .top .left dd,.toptwo dd{
+   font-size: 0.28rem;
+   color:#000;
+   margin-top: 0.16rem;
+}
+.content ul li .top .left dt{
+   font-size: 0.24rem;
+   color:#555;
+   width: 100%;
+   line-height: 0.36rem;
+   display: -webkit-box;
+   display: -moz-box;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+}
+.toptwo dt{
+    font-size: 0.24rem;
+    color:#555;
+    width: 100%;
+    line-height: 0.36rem;
+    display: -webkit-box;
+    display: -moz-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp:2;
+}
+.content ul li .top .right img{
+   width: 100%;
+}
+.content ul li .bottom{
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    margin-top: 0.15rem;
+}
+.content ul li .bottom .leftbo{
+    float: left;
+}
+.content ul li .bottom .leftbo span{
+    float: left;
+    font-size: 0.24rem;
+    color:#000;
+    margin-right: 0.16rem;
+}
+.content ul li .bottom .rightbo{
+    float: right;
+}
+.content ul li .bottom .rightbo{
+    display: inline-block;
+    color:#000;
+    font-size: 0.24rem;
+}
+.content ul li .bottom .rightbo span{margin-right: 0.08rem;}
+.content ul li .bottom .rightbo i{vertical-align: top;}
+/* 无图片样式 */
+.toptwo{width: 100%;}
+.toptwo .touxiang{width: 100%;}
+.toptwo .mastImg{width: 100%;height: 3.6rem;margin-top: 0.08rem;}
+.toptwo .mastImg img{width: 100%;}
+
+body{position: relative;}

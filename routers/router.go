@@ -1,21 +1,16 @@
 package routers
 
 import (
-	"github.com/zhengjianwen/pindaren/controllers/admin"
 	"github.com/astaxie/beego"
-	"github.com/zhengjianwen/pindaren/controllers/api"
+	"github.com/zhengjianwen/pdrgo/controllers/user"
+	"github.com/zhengjianwen/pdrgo/controllers/utils"
+	"github.com/zhengjianwen/pdrgo/controllers/pdr"
 )
 
 func init() {
-	// admin
-    beego.Router("/pindaren/login", &admin.LoginController{})
-    beego.Router("/pindaren/logout", &admin.LogOutController{})
-    beego.Router("/pindaren/index", &admin.IndexController{})
-    beego.Router("/pindaren/users", &admin.UsersController{})
+    beego.Router("/", &pdr.Index{})
+    beego.Router("/login.html", &pdr.Login{})
+    beego.Router("/login/sms", &utils.Sms{})
 
-    //api
-	beego.Router("/", &admin.LoginController{})
-	beego.Router("/api/login", &api.Login{})
-	beego.Router("/api/logout", &api.Logout{})
-
+    beego.Router("/user/index.html", &user.UserController{})
 }

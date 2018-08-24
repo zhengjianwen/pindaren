@@ -1,0 +1,51 @@
+/* 头部 */
+header{
+    background: #F4F0F1!important;
+    position: fixed!important;
+    top: 0;
+    box-shadow: none!important;
+}
+html,body{height: 100%;}
+/*input提示*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color:#E0E0E0;
+    font-size: 0.3rem;
+    font-family: 'Microsoft YaHei';
+    }
+/* 内容 */
+.content{
+    width: 100%;
+    background: #fff;
+    padding:0.52rem 0.48rem;
+    padding-top: 1.4rem;
+    height: 100%;
+    position: relative;
+}
+.content h4{font-size: 0.4rem;margin-bottom: 0.9rem;}
+#tel,#smsCodeP{
+    color: #D0C9C9;
+    font-size: 0.3rem;
+    border: none;
+    margin-bottom: 0;
+    padding:10px 0 2px;
+}
+#loginForm .mui-row{
+    border-bottom: 1px solid #D2D2D2;
+}
+#loginForm .mui-row:nth-child(2){
+    margin-top: 0.76rem;
+}
+#smsCodeP{width: 70%;display: inline-block;}
+#getSms{width: 28%;height: 0.55rem;vertical-align: middle;border-color:#4e4e4e;color:#4e4e4e;}
+/* 确定 */
+.sureBtn{height: 0.76rem;width: 100%;}
+.sureBtn input{
+    height: 100%;
+    line-height: 0.05rem;
+    color: #000;
+    border:0px;
+    background: #D0A972;
+    font-size: 0.36rem;
+    border-radius: 20px;
+    top: 3.1rem;
+}

@@ -1,0 +1,142 @@
+/* 头部 */
+header{padding: 0 0.36rem!important;background: #fff;position: fixed!important;top:0;left: 0;width: 100%;}
+header #searchInp{  
+    background: #F2F2F2;
+    border: 1px solid #f2f2f2;
+    border-radius: 6px;
+    line-height: 0.42rem;
+    height: 0.6rem;
+    padding: 0.1rem 0.3rem 0.05rem 0.6rem;
+    font-size: 0.28rem;
+    margin-top: 0.12rem;
+    margin-bottom: 0;
+}    
+header .mui-icon-search{
+    position: absolute!important;
+    top: 0.05rem!important;
+    left:0.5rem;
+    font-size: 0.38rem!important;
+}
+.mui-btn{
+    position: absolute;
+    padding: 3px 0!important;    
+    top: 26%;
+    font-size: 0.24rem;
+    right: 0px;
+    background: #D0A972;
+    color:#fff;
+}
+.content{
+    width: 100%;
+    margin-top: 1.03rem;
+    padding-bottom: 0.8rem;
+}
+.content ul{
+    width: 100%;
+}
+.content ul li{
+    width: 100%;
+    background: #fff;
+    margin-top: 0.08rem;
+    padding: 0.32rem 0.36rem 0.16rem;
+}
+.content ul li .top{
+    width: 100%;
+    display: flex;
+}
+.content ul li .top .left{
+    width: 3.88rem;
+   margin-right: 0.02rem;
+}
+.content ul li .top .left .touxiang i,.toptwo .touxiang i{
+    width: 0.28rem;
+    height: 0.28rem;
+    display: block;
+    background: #D0A972;
+    vertical-align: middle;
+    display: inline-block;
+}
+.content ul li .top .left .touxiang p,.toptwo .touxiang p{
+    display: inline;
+    color:#000;
+    font-size: 0.24rem;
+}
+.content ul li .top .left dd,.toptwo dd{
+   font-size: 0.28rem;
+   color:#000;
+   margin-top: 0.16rem;
+}
+.content ul li .top .left dt{
+   font-size: 0.24rem;
+   color:#555;
+   width: 100%;
+   line-height: 0.36rem;
+   display: -webkit-box;
+   display: -moz-box;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+}
+.toptwo dt{
+    font-size: 0.24rem;
+    color:#555;
+    width: 100%;
+    line-height: 0.36rem;
+    display: -webkit-box;
+    display: -moz-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp:2;
+}
+.content ul li .top .right img{
+   width: 100%;
+}
+.content ul li .bottom{
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    margin-top: 0.15rem;
+}
+.content ul li .bottom .leftbo{
+    float: left;
+}
+.content ul li .bottom .leftbo span{
+    float: left;
+    font-size: 0.24rem;
+    color:#000;
+    margin-right: 0.16rem;
+}
+.content ul li .bottom .rightbo{
+    float: right;
+}
+.content ul li .bottom .rightbo{
+    display: inline-block;
+    color:#000;
+    font-size: 0.24rem;
+}
+.content ul li .bottom .rightbo span{margin-right: 0.08rem;}
+.content ul li .bottom .rightbo i{vertical-align: top;}
+/* 无图片样式 */
+.toptwo{width: 100%;}
+.toptwo .touxiang{width: 100%;}
+.toptwo .mastImg{width: 100%;height: 3.6rem;margin-top: 0.08rem;}
+.toptwo .mastImg img{width: 100%;}
+/* 底部 */
+.botNav{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    padding:0.04rem 0.6rem;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 6px #ccc;
+}
+.botNav span{color:#000;font-size: 0.32rem;width: 33.3%;display: block;float: left;text-align: center;}
+.botNav span:nth-child(2) a{color:#D0A972;font-size: 0.56rem;}
+body{position: relative;}

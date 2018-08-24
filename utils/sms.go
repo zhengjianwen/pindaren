@@ -22,7 +22,7 @@ type Sms struct {
 
 
 // 支持多自定义版本的短信网关
-func SendSms(sms *Sms) {
+func SendSms(sms *Sms) error {
 	v := url.Values{}
 	_now := strconv.FormatInt(time.Now().Unix(), 10)
 	//fmt.Printf(_now)
@@ -46,7 +46,11 @@ func SendSms(sms *Sms) {
 	resp, err := client.Do(req) //发送
 	defer resp.Body.Close()     //一定要关闭resp.Body
 	data, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(string(data), err)
+	if err != nil{
+		fmt.Println(string(data), err)
+		return fmt.Errorf("短信发送失败")
+	}
+	return nil
 }
 
 
